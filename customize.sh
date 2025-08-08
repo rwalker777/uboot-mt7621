@@ -28,7 +28,7 @@ fi
 DEFCONFIG="configs/mt7621_build_defconfig"
 if [ "$1" = 'NOR' ]; then
 	cp configs/mt7621_nor_template_defconfig ${DEFCONFIG}
-	echo -e "CONFIG_MTDPARTS_DEFAULT=\"mtdparts=raspi:$2\"" >> ${DEFCONFIG}
+	echo -e "CONFIG_MTDPARTS_DEFAULT=\"mtdparts=en25qh128:$2\"" >> ${DEFCONFIG}
 elif [ "$1" = 'NAND' ]; then
 	cp configs/mt7621_nand_template_defconfig ${DEFCONFIG}
 	echo -e "CONFIG_MTDPARTS_DEFAULT=\"mtdparts=nand0:$2\"" >> ${DEFCONFIG}
